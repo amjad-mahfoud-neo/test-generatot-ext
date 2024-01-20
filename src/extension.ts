@@ -3,6 +3,19 @@
 import * as vscode from "vscode";
 const fs = vscode.workspace.fs;
 
+enum TestingFramework {
+  Jest,
+  Mocha,
+  ViTest
+}
+async function determineTestingFramework() {
+  // TODO determine testing framework
+}
+
+async function generateTest(testingFramework: TestingFramework, functionsNamesToTest: string[]) {
+  // TODO generate test 
+}
+
 async function createTestFile(path: string) {
   const workspaceFolders = vscode.workspace.workspaceFolders;
   if (workspaceFolders) {
